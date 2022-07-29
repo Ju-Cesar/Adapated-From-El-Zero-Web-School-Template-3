@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template_3</title>
+    <!-- Main CSS File -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- Render All Elements Normally -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- Font Awesome Library -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+    <body>
+        <!-- _______________________________Navigation Bar Start________________________________ -->
+        <header>
+            <div class="container">
+                <a href="#" class="logo">Elzero</a>
+                <nav>
+                    <ul class="primary-nav">
+                        <li class="primary-nav-link"><a href="#articles">Articles</a></li>
+                        <li class="primary-nav-link"><a href="#gallery">Gallery</a></li>
+                        <li class="primary-nav-link"><a href="#features">Features</a></li>
+                        <li class="primary-nav-link more-links"><a  id="mobile-menu-btn"   href="#">Other Links</a>
+                            <ul  class="secondary-nav">
+                                <li class="image"><img src="images/megamenu.png" alt=""></li>
+                                <li><a href=""><i class="far fa-comments fa-fw"></i> Testimonials</a></li>
+                                <li><a href=""><i class="far fa-user fa-fw"></i> Team members</a></li>
+                                <li><a href=""><i class="far fa-building fa-fw"></i> Services</a></li>
+                                <li><a href=""><i class="far fa-check-circle fa-fw"></i> Our Skills</a></li>
+                                <li><a href=""><i class="far fa-clipboard fa-fw"></i> How It works</a></li>
+                                <li><a href=""><i class="far fa-calendar-alt fa-fw"></i> Events</a></li>
+                                <li><a href=""><i class="fas fa-server fa-fw"></i> Pricing Plans</a></li>
+                                <li><a href=""><i class="far fa-play-circle fa-fw"></i> Top videos</a></li>
+                                <li><a href=""><i class="far fa-chart-bar fa-fw"></i> Stats</a></li>
+                                <li><a href=""><i class="fas fa-percent fa-fw"></i> Request A Discount</a></li>
+                                
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!-- _______________________________Navigation Bar End________________________________ -->
+
+
+        <!-- _______Script for toggling Secondary navigation bar on small screen devices_______ -->
+        <script>
+            const openNav = document.getElementById("mobile-menu-btn");
+            const navigation = document.querySelector(".secondary-nav");
+            openNav.addEventListener('click', ()=> {
+                console.log("clicked")
+                if(navigation.classList.contains("hide-secondary-nav")){
+                    navigation.classList.remove("hide-secondary-nav")
+                }
+                else {
+                    navigation.classList.add("hide-secondary-nav")
+                }
+            });
+                
+        </script>
+
+
+
+    </body>
+</html>
