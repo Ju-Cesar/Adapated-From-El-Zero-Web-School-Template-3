@@ -14,7 +14,7 @@ html {
     font-size: 100%;
     --sectionPadding: 4rem;
     --mainColor: #2196f3;
-    --mainTransition: var(--mainTransition);
+    --mainTransition: .3s;
 }
 body {
     font-family: 'Cairo', sans-serif;
@@ -57,6 +57,8 @@ ul {
     }
 }
 .section-heading {
+    position: relative;
+    z-index: 2;
     margin-bottom: 3rem;
 }
 .section-heading h2 {
@@ -218,7 +220,7 @@ header .container nav .primary-nav .more-links .secondary-nav {
     position: fixed;
     z-index: 99999;
     left: 0%;
-    top: 120px;
+    top: 119.2px;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -283,7 +285,7 @@ header .container nav .primary-nav .more-links .secondary-nav.hide-secondary-nav
         flex-direction: row;
         justify-content: center;
         column-gap: 2rem;
-        top:  85.8px;
+        top:  84.8px;
         left: 50%;
         transform: translateX(-50%);
         -webkit-transform: translateX(-50%);
@@ -793,3 +795,168 @@ header .container nav .primary-nav .more-links .secondary-nav.hide-secondary-nav
     background-color: #03a9f4;
 }
 /* ___________________Gallery Section End______________________ */
+
+
+/* ___________________Testimonials Section Start______________________ */
+.testimonials {
+    background-color: #eee;
+}
+.testimonials .container {
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 4rem 2rem;
+}
+.testimonials .container .box {
+    position: relative;
+    padding: 1.5rem 1rem;
+    background-color: white;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+}
+.testimonials .container .box img {
+    position: absolute;
+    width: 6rem;
+    border: 10px solid #eee;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    right: 0%;
+    top: -2.5rem;
+}
+.testimonials .container .box .role {
+    margin: .5rem 0%;
+    color: #777;
+}
+.testimonials .container .box .rating {
+    margin-bottom: .5rem;
+    
+}
+/* .testimonials .container .box .rating  i {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+} */
+.testimonials .container .box .rating .filled {
+    color: #ffc107;
+}
+.testimonials .container .box p:last-of-type {
+    color: #777;
+    line-height: 1.6;
+}
+/* ___________________Testimonials Section End______________________ */
+
+
+/* ___________________Team Members Section Start______________________ */
+.team .container {
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px, 1fr));
+    gap: 2rem;
+}
+.team .container .box {
+    position: relative;
+    padding: 4rem 0% 2rem;
+}
+.team .container .box::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 80%;
+    top: 50%;
+    right: 0%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    background-color: #eee;
+    z-index: -1;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+}
+.team .container .box::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    right: 0%;
+    top: 0%;
+    background-color: rgb( 0 0 0 /.02);
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    transition-duration: .3s;
+    z-index: 1;
+}
+.team .container .box:hover::after {
+    width: 80%;
+}
+.team .container .box .header {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+}
+.team .container .box .image {
+    flex: 1;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    overflow: hidden;
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+}
+.team .container .box:hover .image {
+    filter: grayscale(1);
+    -webkit-filter: grayscale(1);
+}
+.team .container .box .image img {
+    width: 100%;
+    
+}
+
+.team .container .box .icons {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.team .container .box .icons a {
+    display: block;
+    padding: 1rem 1.5rem;
+}
+.team .container .box .icons a i {
+    transition: var(--mainTransition);
+    -webkit-transition: var(--mainTransition);
+    -moz-transition: var(--mainTransition);
+    -ms-transition: var(--mainTransition);
+    -o-transition: var(--mainTransition);
+}
+.team .container .box .icons a:hover i {
+    color: var(--mainColor);
+}
+.team .container .box .content { 
+    margin-top: 1rem;
+    margin-left: 25%;
+}
+.team .container .box .content h3 {
+    color: var(--mainColor);
+    margin-bottom: .5rem;
+}
+
+/* ___________________Team Members Section End______________________ */
