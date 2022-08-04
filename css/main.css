@@ -960,3 +960,126 @@ header .container nav .primary-nav .more-links .secondary-nav.hide-secondary-nav
 }
 
 /* ___________________Team Members Section End______________________ */
+
+
+/* ___________________Services Section Start______________________ */
+.services {
+    background-color: #eee;
+}
+.services .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    gap: 2rem;
+}
+.services .container .box {
+    position: relative;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 10px rgb( 0 0 0 /.1);
+    counter-increment: box;
+    transition: var(--mainTransition);
+    -webkit-transition: var(--mainTransition);
+    -moz-transition: var(--mainTransition);
+    -ms-transition: var(--mainTransition);
+    -o-transition: var(--mainTransition);
+}
+.services .container .box:hover {
+    transform: translateY(-5px);
+    -webkit-transform: translateY(-5px);
+    -moz-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    -o-transform: translateY(-5px);
+}
+.services .container .box::before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 5px;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    background-color: var(--mainColor);
+    transition: var(--mainTransition);
+    -webkit-transition: var(--mainTransition);
+    -moz-transition: var(--mainTransition);
+    -ms-transition: var(--mainTransition);
+    -o-transition: var(--mainTransition);
+}
+.services .container .box:hover::before {
+    width: 100%;
+}
+.services .container .box .header {
+    text-align: center;
+    padding: 2rem 0%;
+    flex: 1;
+}
+.services .container .box .header i {
+    font-size: 3rem;
+    color: #BBB;
+    margin-bottom: 1rem;
+}
+.services .container .box .header h3 {
+    color: var(--mainColor);
+    font-size: 1.5rem;
+}
+.services .container .box .footer {
+    padding: 0% 1rem;
+    position: relative;
+    height: 50px;
+    background-color: #F7F7F7;   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+.services .container .box .footer .box-num {
+    position: relative;
+    width: fit-content;
+    z-index: 3;
+}
+.services .container .box .footer .box-num::before {
+    content: "0" counter(box);
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.services .container .box .footer::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width:100px;
+    left: 0%;
+    top: 0%;
+    background-color: var(--mainColor);
+    transform: skewX(-25deg) translateX(-20px);
+    -webkit-transform: skewX(-25deg) translateX(-20px);
+    -moz-transform: skewX(-25deg) translateX(-20px);
+    -ms-transform: skewX(-25deg) translateX(-20px);
+    -o-transform: skewX(-25deg) translateX(-20px);
+    z-index: 2;
+} 
+.services .container .box .footer::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width:120px;
+    left: 0%;
+    top: 0%;
+    background-color: #DDD;
+    transform: skewX(-25deg);
+    -webkit-transform: skewX(-25deg);
+    -moz-transform: skewX(-25deg);
+    -ms-transform: skewX(-25deg);
+    -o-transform: skewX(-25deg);
+    z-index: 1;
+} 
+.services .container .box .footer a {
+    color: var(--mainColor);
+
+}
+/* ___________________Services Section End______________________ */
