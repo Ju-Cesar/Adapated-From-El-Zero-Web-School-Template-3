@@ -1083,3 +1083,315 @@ header .container nav .primary-nav .more-links .secondary-nav.hide-secondary-nav
 
 }
 /* ___________________Services Section End______________________ */
+
+
+/* ___________________Skills Section Start______________________ */
+.our-skills .container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.our-skills .container .left-col {
+    display: none;
+    flex: 1;
+}
+.our-skills .container .right-col {
+    flex: 1.5;
+}
+.our-skills .container .right-col h3 {
+    margin: 1rem 0%;
+}
+.our-skills .container .right-col .progress {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 30px;
+    background-color: #eee;
+}
+.our-skills .container .right-col .progress::before {
+    content: "";
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    height: 100%;
+    background-color: var(--mainColor);
+}
+.our-skills .container .right-col .progress:first-of-type::before {
+    width: 80%;
+}
+.our-skills .container .right-col .progress:nth-of-type(2)::before {
+    width: 85%;
+}
+.our-skills .container .right-col .progress:nth-of-type(3)::before {
+    width: 70%;
+}
+.our-skills .container .right-col .progress:last-of-type::before {
+    width: 80%;
+}
+.our-skills .container .right-col .progress::after {
+    content: attr(data-prog);
+    position: absolute;
+    padding: .2rem;
+    font-size: .8rem;
+    top: 0%;
+    right:0%;
+    transform: translateY(calc(-100% - 10px));
+    -webkit-transform: translateY(calc(-100% - 10px));
+    -moz-transform: translateY(calc(-100% - 10px));
+    -ms-transform: translateY(calc(-100% - 10px));
+    -o-transform: translateY(calc(-100% - 10px));
+    border: 1px solid #eee;
+    border-radius: .2rem;
+    -webkit-border-radius: .2rem;
+    -moz-border-radius: .2rem;
+    -ms-border-radius: .2rem;
+    -o-border-radius: .2rem;
+}
+@media (min-width: 768px) {
+    .our-skills .container .left-col {
+        display: block;
+    }
+    .our-skills .container .left-col img {
+        width: 100%;
+    }
+}
+/* ___________________Skills Section End______________________ */
+
+
+/* ___________________How it works Section Start______________________ */
+.how-it-works {
+    background-color: #eee;
+}
+.how-it-works .container {
+    display: flex;
+    flex-direction: column;
+}
+.how-it-works .container .left-col {
+    flex: 1;
+    text-align: center;
+    margin-bottom: 2rem;
+
+}
+.how-it-works .container .left-col img {
+    width: 100%;
+    max-width: 400px;
+}
+.how-it-works .container .right-col .box {
+    position: relative;
+    padding: 2rem 1rem;
+    text-align: center;
+    border: 1px solid white;
+    z-index: 1;
+    
+}
+.how-it-works .container .right-col .box::before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 0%;
+    background-color: #F7F7F7;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transition: var(--mainTransition);
+    -webkit-transition: var(--mainTransition);
+    -moz-transition: var(--mainTransition);
+    -ms-transition: var(--mainTransition);
+    -o-transition: var(--mainTransition);
+    z-index: -1;
+}
+.how-it-works .container .right-col .box:hover::before {
+    width: 100%;
+    height: 100%;
+}
+.how-it-works .container .right-col .box:not(:last-child) {
+    margin-bottom: 2rem;
+}
+.how-it-works .container .right-col .box img {
+    width: 80px;
+    margin-bottom: 1rem;
+}
+.how-it-works .container .right-col .box h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+.how-it-works .container .right-col .box p {
+    line-height: 2;
+    color: #777;
+    font-size: 1.2rem;
+}
+@media (min-width: 768px) {
+    .how-it-works .container {
+        flex-direction: row;
+        align-items: center;
+        gap: 2rem;
+    }
+    .how-it-works .container .left-col {
+        margin-bottom: 0%;
+        flex: 1;
+    }
+    .how-it-works .container .right-col {
+        flex: 1;
+    }
+    
+    .how-it-works .container .right-col .box {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        text-align: left;
+    }
+    .how-it-works .container .right-col .box h3 {
+        margin-bottom: .5rem;
+    }
+    .how-it-works .container .right-col .box img  {
+        margin-bottom: 0%;
+    }
+    .how-it-works .container .right-col .box p {
+        line-height: 1.6;
+    }
+}
+/* ___________________How it works Section End______________________ */
+
+
+/* ___________________Events Section Start______________________ */
+.events .container .event-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+.events .container .left-col {
+    flex: 1;
+    display: none;
+}
+.events .container .right-col {
+    flex: 1.5;
+    text-align: center;
+}
+.events .container .right-col .event-countdown {
+    margin: 0% auto 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.events .container .right-col .event-countdown div {
+    flex: 0 0 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid #ddd;
+    height: 100px;
+    border-radius: .5rem;
+    transition: var(--mainTransition);
+    -webkit-transition: var(--mainTransition);
+    -moz-transition: var(--mainTransition);
+    -ms-transition: var(--mainTransition);
+    -o-transition: var(--mainTransition);
+}
+.events .container .right-col .event-countdown div:hover {
+    border-color: var(--mainColor);
+}
+.events .container .right-col .event-countdown div:not(:last-child) {
+    margin-right: 1rem;
+}
+.events .container .right-col .event-countdown div span:first-child {
+    order: 1;
+    border-top: 1px solid #DDD;
+    color: var(--mainColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    transition: var(--mainTransition);
+    -webkit-transition: var(--mainTransition);
+    -moz-transition: var(--mainTransition);
+    -ms-transition: var(--mainTransition);
+    -o-transition: var(--mainTransition);
+}
+.events .container .right-col .event-countdown div:hover span:first-child {
+    border-color: var(--mainColor);
+}
+.events .container .right-col .event-countdown div span:last-child {
+    padding: 1rem 0%;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--mainColor);
+}
+.events .container .right-col .event-title {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+.events .container .right-col .description {
+    line-height: 2;
+    color: #777;
+    font-size: 1.1rem;
+}
+.events .container form {
+    display: flex;
+    flex-direction:column;
+    padding: 1rem;
+    background-color: #f6f5f5;
+}
+.events .container form input {
+    height: 3.5rem;
+    border: none;
+}
+.events .container form input:first-child{
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+}
+.events .container form input:first-child:focus {
+    outline: none;
+
+}
+.events .container form input[type="submit"] {
+    background-color: var(--mainColor);
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+@media (min-width: 768px) {
+    .events .container .left-col {
+        display: block;
+    }
+    .events .container .left-col img {
+        width: 100%;
+    }
+    .events .container .right-col .description  {
+        width: 80%;
+        margin: 0% auto;
+    }
+    .events .container form {
+        flex-direction:row;
+        max-width: 600px;
+        margin-inline: auto ;
+        padding: 2rem;
+        border-radius: 3.5rem;
+        -webkit-border-radius: 3.5rem;
+        -moz-border-radius: 3.5rem;
+        -ms-border-radius: 3.5rem;
+        -o-border-radius: 3.5rem;
+}
+    .events .container form input {
+        border: none;
+        border-radius: 1.75rem;
+        -webkit-border-radius: 1.75rem;
+        -moz-border-radius: 1.75rem;
+        -ms-border-radius: 1.75rem;
+        -o-border-radius: 1.75rem;
+}
+    .events .container form input:first-child {
+        margin-bottom: 0%;
+        padding-left: 2rem;
+        flex: 1;
+    }
+    .events .container form input[type="submit"] {
+        padding-inline: 1rem;
+        margin-left: 2rem;
+    }
+}
+
+/* ___________________Events Section End______________________ */
