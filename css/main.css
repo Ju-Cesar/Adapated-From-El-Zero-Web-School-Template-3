@@ -1395,3 +1395,161 @@ header .container nav .primary-nav .more-links .secondary-nav.hide-secondary-nav
 }
 
 /* ___________________Events Section End______________________ */
+
+/* ___________________PricingSection Start______________________ */
+.pricing {
+    background-color: #eee;
+}
+.pricing .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    gap: 2rem;
+}
+.pricing .container .box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 10px rgb( 0 0 0 /.1);
+    padding: 2rem 0%;
+    background-color: white;
+    z-index: 2;
+
+}
+.pricing .container .box::before,
+.pricing .container .box::after {
+    content: "";
+    position: absolute;
+    height: 50%;
+    width: 0%;
+    background-color: #eee;
+    transition: var(--mainTransition);
+    -webkit-transition: var(--mainTransition);
+    -moz-transition: var(--mainTransition);
+    -ms-transition: var(--mainTransition);
+    -o-transition: var(--mainTransition);
+    z-index: -1;
+}
+.pricing .container .box::before {
+    top: 0%;
+    left: 0%;
+}
+.pricing .container .box::after {
+    bottom: 0%;
+    right: 0%;
+}
+.pricing .container .box:hover::before,
+.pricing .container .box:hover::after {
+    width: 100%;
+}
+.pricing .container .popular .header {
+    position: relative;
+}
+.pricing .container .popular .header::before {
+    content: "Most Popular";
+    position: absolute;
+    right: 1.5rem;
+    top: -2rem;
+    writing-mode: vertical-rl;
+    -webkit-writing-mode: vertical-rl;
+    -ms-writing-mode: vertical-rl;
+    text-orientation: mixed;
+    -webkit-text-orientation: mixed;
+    background-color: var(--mainColor);
+    color: white;
+    font-weight: bold;
+    height: 116px;
+    width: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem 0%;
+    
+
+}
+.pricing .container .popular .header::after {
+    content: "";
+    position: absolute;
+    right: 1.5rem;
+    top: calc(116px - 2rem);
+    width: 0%;
+    height: 0%;
+    border: 1rem solid var(--mainColor);
+    border-bottom-color: transparent;
+
+}
+
+.pricing .container .box  .header {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.pricing .container .box  .header h3 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+.pricing .container .box  .header img {
+    width: 90px;
+    margin-bottom: 2rem;
+}
+.pricing .container .box  .header .price {
+    color: var(--mainColor);
+    font-size: 4rem;
+    font-weight: bold;
+}
+.pricing .container .box  .header .price span {
+    display: block;
+    margin-top: .5rem;
+    color: #777;
+    font-size: 1.1rem;
+    font-weight: normal;
+}
+.pricing .container .box  .body  ul li {
+    position: relative;
+    padding: 1rem 0% 1rem 1rem;
+    border-top: 1px solid #eee;
+}
+.pricing .container .box  .body  ul li::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f00c";
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-right: 1rem;
+    color: var(--mainColor);
+}
+.pricing .container .box .footer {
+    position: relative;
+    margin-top: 1rem;
+    text-align: center;
+
+}
+.pricing .container .box .footer button {
+    border: 2px solid var(--mainColor);
+    padding: 1rem;
+    border-radius: .5rem;
+    -webkit-border-radius: .5rem;
+    -moz-border-radius: .5rem;
+    -ms-border-radius: .5rem;
+    -o-border-radius: .5rem;
+    background-color: transparent;
+    color: var(--mainColor);
+    font-weight: bold;
+    cursor: pointer;
+    transition: var(--mainTransition);
+    -webkit-transition: var(--mainTransition);
+    -moz-transition: var(--mainTransition);
+    -ms-transition: var(--mainTransition);
+    -o-transition: var(--mainTransition);
+}
+.pricing .container .box .footer button:hover {
+    background-color: var(--mainColor);
+    color: white;
+}
+@media (min-width: 1200px) {
+    .pricing .container .popular {
+        transform: translateY(-20px);
+        -webkit-transform: translateY(-20px);
+        -moz-transform: translateY(-20px);
+        -ms-transform: translateY(-20px);
+        -o-transform: translateY(-20px);
+}
+}
+/* ___________________PricingSection End______________________ */
