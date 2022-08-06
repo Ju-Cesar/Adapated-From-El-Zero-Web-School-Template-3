@@ -15,6 +15,7 @@ html {
     --sectionPadding: 4rem;
     --mainColor: #2196f3;
     --mainTransition: .3s;
+    --sectionBgColor: #eee;
 }
 body {
     font-family: 'Cairo', sans-serif;
@@ -565,7 +566,7 @@ header .container nav .primary-nav .more-links .secondary-nav.hide-secondary-nav
 
 /* ___________________Gallery Section Start______________________ */
 .gallery {
-    background-color: #eee;
+    background-color: var(--sectionBgColor);
 }
 .gallery .container {
     display: grid;
@@ -799,7 +800,7 @@ header .container nav .primary-nav .more-links .secondary-nav.hide-secondary-nav
 
 /* ___________________Testimonials Section Start______________________ */
 .testimonials {
-    background-color: #eee;
+    background-color: var(--sectionBgColor);
 }
 .testimonials .container {
     margin-top: 4rem;
@@ -820,7 +821,7 @@ header .container nav .primary-nav .more-links .secondary-nav.hide-secondary-nav
 .testimonials .container .box img {
     position: absolute;
     width: 6rem;
-    border: 10px solid #eee;
+    border: 10px solid var(--sectionBgColor);
     border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
@@ -874,7 +875,7 @@ header .container nav .primary-nav .more-links .secondary-nav.hide-secondary-nav
     -moz-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     -o-transform: translateY(-50%);
-    background-color: #eee;
+    background-color: var(--sectionBgColor);
     z-index: -1;
     border-radius: 1rem;
     -webkit-border-radius: 1rem;
@@ -964,7 +965,7 @@ header .container nav .primary-nav .more-links .secondary-nav.hide-secondary-nav
 
 /* ___________________Services Section Start______________________ */
 .services {
-    background-color: #eee;
+    background-color: var(--sectionBgColor);
 }
 .services .container {
     display: grid;
@@ -1106,7 +1107,7 @@ header .container nav .primary-nav .more-links .secondary-nav.hide-secondary-nav
     position: relative;
     width: 100%;
     height: 30px;
-    background-color: #eee;
+    background-color: var(--sectionBgColor);
 }
 .our-skills .container .right-col .progress::before {
     content: "";
@@ -1140,7 +1141,7 @@ header .container nav .primary-nav .more-links .secondary-nav.hide-secondary-nav
     -moz-transform: translateY(calc(-100% - 10px));
     -ms-transform: translateY(calc(-100% - 10px));
     -o-transform: translateY(calc(-100% - 10px));
-    border: 1px solid #eee;
+    border: 1px solid var(--sectionBgColor);
     border-radius: .2rem;
     -webkit-border-radius: .2rem;
     -moz-border-radius: .2rem;
@@ -1160,7 +1161,7 @@ header .container nav .primary-nav .more-links .secondary-nav.hide-secondary-nav
 
 /* ___________________How it works Section Start______________________ */
 .how-it-works {
-    background-color: #eee;
+    background-color: var(--sectionBgColor);
 }
 .how-it-works .container {
     display: flex;
@@ -1398,7 +1399,7 @@ header .container nav .primary-nav .more-links .secondary-nav.hide-secondary-nav
 
 /* ___________________PricingSection Start______________________ */
 .pricing {
-    background-color: #eee;
+    background-color: var(--sectionBgColor);
 }
 .pricing .container {
     display: grid;
@@ -1421,7 +1422,7 @@ header .container nav .primary-nav .more-links .secondary-nav.hide-secondary-nav
     position: absolute;
     height: 50%;
     width: 0%;
-    background-color: #eee;
+    background-color: var(--sectionBgColor);
     transition: var(--mainTransition);
     -webkit-transition: var(--mainTransition);
     -moz-transition: var(--mainTransition);
@@ -1505,7 +1506,7 @@ header .container nav .primary-nav .more-links .secondary-nav.hide-secondary-nav
 .pricing .container .box  .body  ul li {
     position: relative;
     padding: 1rem 0% 1rem 1rem;
-    border-top: 1px solid #eee;
+    border-top: 1px solid var(--sectionBgColor);
 }
 .pricing .container .box  .body  ul li::before {
     font-family: "Font Awesome 5 Free";
@@ -1552,4 +1553,166 @@ header .container nav .primary-nav .more-links .secondary-nav.hide-secondary-nav
         -o-transform: translateY(-20px);
 }
 }
-/* ___________________PricingSection End______________________ */
+/* ___________________Pricing Section End______________________ */
+
+/* ___________________Videos Section Start______________________ */
+.videos .container {
+    display: flex;
+    flex-direction: column;
+}
+.videos .container .left-col,
+.videos .container .right-col {
+    border: 1px solid #ddd;
+}
+.videos .container .left-col .header {
+    padding: 1.5rem 1rem;
+    background-color: var(--sectionBgColor);
+}
+.videos .container .left-col .header h3 {
+    display: inline-block;
+}
+
+.videos .container .left-col .header i {
+    float: right;
+}
+.videos .container .left-col  ul li {
+    padding: 1rem;
+    border-top: 1px solid var(--sectionBgColor);
+    transition: var(--mainTransition);
+    -webkit-transition: var(--mainTransition);
+    -moz-transition: var(--mainTransition);
+    -ms-transition: var(--mainTransition);
+    -o-transition: var(--mainTransition);
+}
+.videos .container .left-col  ul li:hover {
+    background-color: #F7F7F7;
+}
+.videos .container .left-col  ul li .video-title {
+    transition: var(--mainTransition);
+    -webkit-transition: var(--mainTransition);
+    -moz-transition: var(--mainTransition);
+    -ms-transition: var(--mainTransition);
+    -o-transition: var(--mainTransition);
+}
+.videos .container .left-col  ul li:hover .video-title {
+    color: var(--mainColor);
+}
+.videos .container .left-col  ul li .video-duration {
+    display: block;
+    margin-top: 1rem;
+    color: #777;
+}
+.videos .container .right-col{
+    padding: 1rem;
+    background-color: #ddd;
+    display: flex;
+    flex-direction: column;
+}
+.videos .container .right-col .image {
+    flex: 1;
+}
+.videos .container .right-col img{
+    width: 100%;
+}
+
+.videos .container .right-col  .video-title {
+    margin-top: 1rem;
+    padding: 1.5rem 1rem;
+    background-color: white;
+
+}
+@media (min-width: 992px) {
+    .videos .container {
+        flex-direction: row;
+
+        
+    }
+    .videos .container .left-col {
+        flex: 1;
+    }
+    .videos .container .right-col {
+        flex: 3;
+        
+    }
+    
+
+}
+/* ___________________Videos Section End______________________ */
+
+/* ___________________Stats Section Start______________________ */
+.stats {
+    position: relative;
+    background-image: url("/images/stats.jpg");
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+.stats::before {
+    content: "";
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(255 255 255 / .94);
+    z-index: -1;
+}
+.stats .container h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 4rem;
+}
+.stats .container .content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 2rem;
+}
+.stats .container .content .box {
+    position: relative;
+    box-shadow: 0 0 10px rgb( 0 0 0 /.1);
+    text-align: center;
+    padding: 2rem 0%;
+    background-color: white;
+}
+.stats .container .content .box::before,
+.stats .container .content .box::after {
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 0%;
+    background-color: var(--mainColor);
+    transition: var(--mainTransition);
+    -webkit-transition: var(--mainTransition);
+    -moz-transition: var(--mainTransition);
+    -ms-transition: var(--mainTransition);
+    -o-transition: var(--mainTransition);
+}
+.stats .container .content .box::after {
+    bottom: 0%;
+    right: 0%;
+}
+.stats .container .content .box::before {
+    top: 0%;
+    left: 0%;
+}
+.stats .container .content .box:hover::before,
+.stats .container .content .box:hover::after {
+    height: 100%;
+}
+.stats .container .content .box i {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+.stats .container .content .box span {
+    display: block;
+    font-weight: bold;
+}
+.stats .container .content .box span:first-of-type {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+.stats .container .content .box span:last-of-type {
+    color: var(--mainColor);
+    font-size: 1.2rem;
+}
+/* ___________________Stats Section End______________________ */
